@@ -1,0 +1,7 @@
+var isSvg = function(src) {
+  return src && src.indexOf('.svg') > -1;
+}
+
+module.exports = {
+  isSvg: isSvg
+};

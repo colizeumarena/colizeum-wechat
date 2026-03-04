@@ -1,0 +1,59 @@
+<view class="container" style="padding-top: {{navHeight}}px;">
+  <nav-bar navHeight="{{navHeight}}" statusBarHeight="{{statusBarHeight}}" title="{{i18n.auth.login_title}}" bind:back="handleBack" />
+
+  <scroll-view
+    scroll-y
+    class="content"
+    enable-flex
+    scroll-into-view="{{activeFieldId}}"
+    scroll-with-animation="true"
+  >
+    <view class="card login-card">
+      <view class="login-header">
+        <view class="brand-title">Lumisa</view>
+        <view class="page-title">{{i18n.auth.login_title}}</view>
+        <view class="page-desc">{{i18n.auth.login_desc}}</view>
+      </view>
+
+      <view class="form">
+        
+        <view class="form-group" id="emailField">
+          <input-group
+            label="{{i18n.auth.email}}"
+            icon="/assets/icons/ic_mail.svg"
+            type="text"
+            placeholder="{{i18n.auth.email}}"
+            field="email"
+            value="{{email}}"
+            bind:input="handleInput"
+            bind:focus="handleFieldFocus"
+            bind:blur="handleFieldBlur"
+          />
+        </view>
+
+        
+        <view class="form-group" id="passwordField">
+          <input-group
+            label="{{i18n.auth.password}}"
+            icon="/assets/icons/ic_lock.svg"
+            type="password"
+            enablePasswordToggle="{{true}}"
+            placeholder="{{i18n.auth.password}}"
+            field="password"
+            value="{{password}}"
+            bind:input="handleInput"
+            bind:focus="handleFieldFocus"
+            bind:blur="handleFieldBlur"
+          />
+        </view>
+
+        <primary-button
+          text="{{i18n.auth.login_btn}}"
+          bind:tap="handleLogin"
+        />
+      </view>
+    </view>
+
+    <view style="height: {{bottomSpacer}}px;"></view>
+  </scroll-view>
+</view>

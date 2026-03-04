@@ -1,0 +1,56 @@
+module.exports = {
+  zh: {
+    contact: {
+      title: "联系我们",
+      intro_title: "我们随时为您服务",
+      intro_desc:
+        "如有任何疑问或需要帮助，请通过以下方式联系我们。我们的客服团队将竭诚为您服务。",
+      section_contact_title: "联系方式",
+      section_social_title: "社交媒体",
+      section_office_title: "办公地址",
+      phone_label: "客服电话",
+      phone_value: "900 811 473",
+      whatsapp_label: "WhatsApp",
+      whatsapp_value: "688 100 100",
+      email_label: "电子邮箱",
+      email_value: "atcliente@lumisa.es",
+      wechat_title: "微信客服",
+      wechat_desc: "添加我们的微信获取即时帮助",
+      office_main_title: "总部 - 巴塞罗那",
+      office_main_addr: "Carrer de Ausias March, 67, 08010, Barcelona",
+      office_sub_title: "合作办公室",
+      office_sub_addr:
+        "Calle de Cistierna, 2, local 7, 28947, Fuenlabrada, Madrid",
+      whatsapp_toast: "请通过 WhatsApp 添加 688 100 100",
+      wechat_toast: "请在公众号或客服中添加微信",
+      copied: "已复制",
+    },
+  },
+  es: {
+    contact: {
+      title: "Contacto",
+      intro_title: "Estamos aquí para ayudarte",
+      intro_desc:
+        "Si tienes alguna duda, contáctanos. Nuestro equipo está aquí para ayudarte.",
+      section_contact_title: "Contacto",
+      section_social_title: "Redes Sociales",
+      section_office_title: "Oficinas",
+      phone_label: "Teléfono Atención",
+      phone_value: "900 811 473",
+      whatsapp_label: "WhatsApp",
+      whatsapp_value: "688 100 100",
+      email_label: "Correo electrónico",
+      email_value: "atcliente@lumisa.es",
+      wechat_title: "WeChat",
+      wechat_desc: "Añade nuestro WeChat para ayuda inmediata",
+      office_main_title: "Sede Central - Barcelona",
+      office_main_addr: "Carrer de Ausias March, 67, 08010, Barcelona",
+      office_sub_title: "Oficina Colaboradora",
+      office_sub_addr:
+        "Calle de Cistierna, 2, local 7, 28947, Fuenlabrada, Madrid",
+      whatsapp_toast: "WhatsApp: 688 100 100",
+      wechat_toast: "Añade nuestro WeChat para ayuda inmediata",
+      copied: "Copiado",
+    },
+  },
+};

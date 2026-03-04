@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "nav-bar": "/components/nav-bar/nav-bar",
+    "info-card": "/components/info-card/info-card",
+    "list-item": "/components/list-item/list-item"
+  }
+}

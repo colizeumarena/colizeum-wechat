@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "hero-banner": "/components/hero-banner/hero-banner",
+    "svg-icon": "/components/svg-icon/svg-icon",
+    "list-item": "/components/list-item/list-item"
+  }
+}

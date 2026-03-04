@@ -1,0 +1,51 @@
+<view class="container" style="padding-top: {{navHeight}}px;">
+  <nav-bar navHeight="{{navHeight}}" statusBarHeight="{{statusBarHeight}}" title="{{i18n.packages.title}}" bind:back="handleBack" />
+
+  <scroll-view scroll-y class="content" enable-flex>
+    <view class="page-inner">
+      <block wx:if="{{loading}}">
+        <package-skeleton />
+      </block>
+      <block wx:elif="{{error}}">
+        <view class="error-container">
+            <image class="error-icon" src="/assets/icons/ic_nodata.svg" mode="aspectFit"></image>
+            <view class="error-text">{{errorMessage}}</view>
+            <primary-button text="{{i18n.common.confirm}}" bind:tap="onRetry" />
+        </view>
+      </block>
+      <block wx:else>
+        <block wx:for="{{sections}}" wx:key="id" wx:for-item="section">
+          <view class="section-subtitle">{{section.title}}</view>
+
+          <block wx:for="{{section.packages}}" wx:key="id" wx:for-item="pkg">
+            <package-card
+              tagList="{{pkg.tagList}}"
+              badgeText="{{pkg.badgeText}}"
+              title="{{pkg.title}}"
+              subtitle="{{pkg.subtitle}}"
+              desc="{{pkg.desc}}"
+              showTaxToggle="{{pkg.showTaxToggle}}"
+              taxLabel="{{section.taxLabel}}"
+              taxIncludedLabel="{{section.taxIncludedLabel}}"
+              energyTitle="{{section.energyTitle}}"
+              powerTitle="{{section.powerTitle}}"
+              extraTitle="{{section.extraTitle}}"
+              energyRows="{{pkg.energyRows}}"
+              powerRows="{{pkg.powerRows}}"
+              extraRows="{{pkg.extraRows}}"
+            >
+              <primary-button
+                text="{{i18n.packages.cta_quote}}"
+                variant="dark"
+                bind:tap="handleInterest"
+              />
+
+            </package-card>
+          </block>
+        </block>
+      </block>
+    </view>
+
+    <view style="height: 40px;"></view>
+  </scroll-view>
+</view>

@@ -1,0 +1,53 @@
+<view class="container" style="padding-top: {{navHeight}}px;">
+  <nav-bar navHeight="{{navHeight}}" statusBarHeight="{{statusBarHeight}}" title="{{i18n.contact.title}}" bind:back="handleBack" />
+
+  <scroll-view scroll-y class="content" enable-flex>
+    <view class="page-inner">
+      <view class="intro-title">{{i18n.contact.intro_title}}</view>
+      <view class="intro-desc">{{i18n.contact.intro_desc}}</view>
+
+      <view class="section-title">{{i18n.contact.section_contact_title}}</view>
+
+      <view class="card-list">
+        <view wx:for="{{contactCards}}" wx:key="id">
+          <info-card
+            iconPath="{{item.iconPath}}"
+            label="{{item.label}}"
+            value="{{item.value}}"
+            bind:tap="handleCardTap"
+            data-type="{{item.type}}"
+          />
+        </view>
+      </view>
+
+      <view class="section-title">{{i18n.contact.section_social_title}}</view>
+
+      <view class="wechat-contact-wrap">
+        <info-card
+          iconPath="/assets/icons/ic_wechat.svg"
+          variant="green"
+          label="{{i18n.contact.wechat_title}}"
+          value="{{i18n.contact.wechat_desc}}"
+        />
+        <button class="wechat-contact-btn-overlay" open-type="contact" session-from="lumisa-miniprogram" />
+      </view>
+
+      <view class="section-title section-title-spaced">{{i18n.contact.section_office_title}}</view>
+
+      <view class="office-card">
+        <block wx:for="{{offices}}" wx:key="id" wx:for-index="idx">
+          <list-item
+            icon="/assets/icons/ic_location.svg"
+            title="{{item.title}}"
+            desc="{{item.desc}}"
+            border="{{idx === 0}}"
+            bind:tap="handleOpenMap"
+            data-office-id="{{item.id}}"
+          />
+        </block>
+      </view>
+    </view>
+
+    <view style="height: 40px;"></view>
+  </scroll-view>
+</view>

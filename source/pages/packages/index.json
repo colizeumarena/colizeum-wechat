@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "nav-bar": "/components/nav-bar/nav-bar",
+    "primary-button": "/components/primary-button/primary-button",
+    "package-card": "/components/package-card/package-card",
+    "package-skeleton": "/components/package-skeleton/package-skeleton"
+  }
+}

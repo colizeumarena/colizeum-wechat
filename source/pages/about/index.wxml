@@ -1,0 +1,37 @@
+<view class="container" style="padding-top: {{navHeight}}px;">
+  <nav-bar navHeight="{{navHeight}}" statusBarHeight="{{statusBarHeight}}" title="{{i18n.about.title}}" bind:back="handleBack" />
+
+  <scroll-view scroll-y class="content" enable-flex>
+    <hero-banner
+      imageSrc="https://lumisa-strapi.s3.eu-south-2.amazonaws.com/promociones_cover_060bef7f68.webp"
+      title="Lumisa"
+      subtitle="{{i18n.about.banner_subtitle}}"
+    />
+
+    <view class="intro-card">
+      <view class="intro-title">{{i18n.about.intro_title}}</view>
+      <view class="intro-paragraph">{{i18n.about.intro_p1}}</view>
+      <view class="intro-paragraph">{{i18n.about.intro_p2}}</view>
+    </view>
+
+    <value-card
+      iconPath="/assets/icons/ic_flag.svg"
+      title="{{i18n.about.mission_title}}"
+      desc="{{i18n.about.mission_desc}}"
+      layoutType="header"
+    />
+
+    <view class="values-section">
+      <view class="values-header">{{i18n.about.values_title}}</view>
+      <block wx:for="{{values}}" wx:key="id">
+        <value-card
+          iconPath="{{item.iconPath}}"
+          title="{{item.title}}"
+          desc="{{item.desc}}"
+        />
+      </block>
+    </view>
+
+    <view style="height: 40px;"></view>
+  </scroll-view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "nav-bar": "/components/nav-bar/nav-bar",
+    "value-card": "/components/value-card/value-card",
+    "hero-banner": "/components/hero-banner/hero-banner"
+  }
+}

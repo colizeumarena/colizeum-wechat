@@ -1,0 +1,59 @@
+<view class="container" style="padding-top: {{navHeight}}px;">
+  
+  <view class="custom-header" style="height: {{navHeight}}px; padding-top: {{statusBarHeight}}px;">
+    <view class="header-content">
+      <view class="lang-dropdown-container">
+        <view class="lang-btn" bindtap="toggleLangMenu">
+          <text>{{lang === 'zh' ? i18n.common.lang_zh : i18n.common.lang_es}}</text>
+          <svg-icon class="arrow-down" src="/assets/icons/ic_arrow.svg" size="16" color="#ffffff" />
+        </view>
+        <view class="lang-menu {{showLangMenu ? 'show' : ''}}">
+          <view class="lang-option" bindtap="switchLang" data-lang="zh">
+            <text class="lang-flag">🇨🇳</text>
+            <text>{{i18n.common.lang_zh}}</text>
+          </view>
+          <view class="lang-option" bindtap="switchLang" data-lang="es">
+            <text class="lang-flag">🇪🇸</text>
+            <text>{{i18n.common.lang_es}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="header-title">{{i18n.home.title}}</view>
+      <view class="header-right"></view> 
+    </view>
+  </view>
+
+  <view class="banner-container">
+    <swiper class="banner-swiper" indicator-dots="{{false}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}" circular="{{true}}" bindchange="onBannerChange">
+      <block wx:for="{{banners}}" wx:key="id">
+        <swiper-item>
+          <image src="{{item.image}}" class="banner-image" mode="aspectFill"></image>
+          <view class="banner-overlay"></view>
+          <view class="banner-content-wrapper">
+             <view class="banner-top-logo">
+                <text class="banner-logo-text">Lumisa</text>
+                <text class="banner-logo-sub">{{i18n.home[item.logo_sub_key]}}</text>
+             </view>
+             <view class="banner-text-content">
+                <view class="banner-title">{{i18n.home[item.title_key]}}</view>
+                <view class="banner-subtitle">{{i18n.home[item.subtitle_key]}}</view>
+             </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="menu-grid">
+    <view class="menu-item" wx:for="{{menuItems}}" wx:key="id" bindtap="handleMenuClick" data-item="{{item}}">
+      <view class="menu-icon">
+        <svg-icon src="{{item.iconPath}}" class="icon-img" color="#ffffff" />
+      </view>
+      <view class="menu-content">
+        <view class="menu-title">{{i18n.home[item.title_key]}}</view>
+        <view class="menu-desc">{{i18n.home[item.desc_key]}}</view>
+      </view>
+      <view class="menu-arrow">›</view>
+    </view>
+  </view>
+</view>

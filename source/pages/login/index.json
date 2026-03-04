@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/nav-bar/nav-bar",
+    "primary-button": "/components/primary-button/primary-button",
+    "input-group": "/components/input-group/input-group"
+  }
+}

@@ -1,0 +1,118 @@
+<view class="container" style="padding-top: {{navHeight}}px;">
+  
+  <view class="custom-header" style="height: {{navHeight}}px; padding-top: {{statusBarHeight}}px;">
+    <view class="header-content">
+      <view class="header-title">{{i18n.invoice.title}}</view>
+    </view>
+    
+    <view class="swiper-dots" wx:if="{{contracts.length > 1}}">
+      <block wx:for="{{contracts}}" wx:key="id">
+        <view class="dot {{currentContractIndex === index ? 'active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+
+  
+  <view class="content" wx:if="{{loading && contracts.length === 0}}">
+      <view class="sticky-header">
+         
+         <list-item loading="{{true}}" card="{{true}}" />
+      </view>
+
+      <view style="padding-top: 16px;">
+        <invoice-skeleton />
+      </view>
+  </view>
+
+  
+  <swiper
+    class="full-page-swiper"
+    wx:if="{{isLoggedIn && contracts.length > 0}}"
+    current="{{currentContractIndex}}"
+    bindchange="handleContractChange"
+    duration="300"
+    circular="{{false}}"
+  >
+    <block wx:for="{{contracts}}" wx:key="id" wx:for-item="contract">
+      <swiper-item>
+        
+        <view class="sticky-header-container">
+           <list-item 
+             card="{{true}}"
+             active="{{true}}" 
+             title="{{i18n.invoice.contract}}: {{contract.name}}"
+             icon="/assets/icons/ic_contract.svg"
+             isLink="{{true}}"
+             bind:tap="handleViewContractDetails"
+             data-codcli="{{contract.id}}"
+           />
+        </view>
+
+        <scroll-view
+          scroll-y
+          class="content"
+          enable-flex
+          bindscrolltolower="handleLoadMore"
+        >
+          
+          
+          
+          <view wx:if="{{loading && (!invoices || invoices.length === 0)}}">
+            <invoice-skeleton />
+          </view>
+
+          
+          <block wx:else>
+             
+            <view class="invoice-header" wx:if="{{totalCount > 0}}">
+              <view class="invoice-header-title">{{i18n.invoice.title}}</view>
+              <view class="total-count">{{t.tArgs(i18n.invoice.total_count, {count: totalCount})}}</view>
+            </view>
+
+            
+            <view class="empty-state" wx:if="{{totalCount === 0 && !loading}}">
+              <view class="empty-icon">
+                <svg-icon src="/assets/icons/ic_nodata.svg" size="180" color="#999999" />
+              </view>
+              <view class="empty-text">{{i18n.invoice.no_data || '暂无发票'}}</view>
+            </view>
+
+            
+            <view class="invoice-list" wx:if="{{totalCount > 0}}">
+              <block wx:for="{{invoices}}" wx:key="id">
+                <invoice-item
+                  item="{{item}}"
+                  labels="{{ { status_paid: i18n.invoice.status_paid, status_unpaid: i18n.invoice.status_unpaid, date: i18n.invoice.date, period: i18n.invoice.period, amount: i18n.invoice.amount, download: i18n.invoice.download } }}"
+                  titlePrefix="{{i18n.invoice.invoice_card}}"
+                  bind:download="handleDownload"
+                />
+              </block>
+            </view>
+
+            <view class="loading-more" wx:if="{{isLoadingMore}}">
+              <text>Loading...</text>
+            </view>
+            
+            <view class="no-more" wx:if="{{!hasMore && invoices.length > 0}}">
+              <text>{{i18n.invoice.no_more_data || 'No more invoices'}}</text>
+            </view>
+          </block>
+
+          
+          <view style="height: 16px;"></view>
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  
+  <view class="empty-state" wx:if="{{!loading && (!isLoggedIn || contracts.length === 0)}}">
+      <view class="empty-icon">
+        <svg-icon src="/assets/icons/ic_nodata.svg" size="180" color="#999999" />
+      </view>
+      <view class="empty-text">{{i18n.invoice.no_data || '暂无发票'}}</view>
+      <view wx:if="{{!isLoggedIn}}" class="empty-login-btn" bindtap="handleLogin">
+        {{i18n.mine.login}}
+      </view>
+  </view>
+</view>

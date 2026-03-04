@@ -1,0 +1,60 @@
+<view class="container" style="padding-top: {{navHeight}}px;">
+  <nav-bar navHeight="{{navHeight}}" statusBarHeight="{{statusBarHeight}}" title="{{i18n.services.title}}" bind:back="handleBack" />
+
+  
+  <scroll-view scroll-y class="content" enable-flex>
+    
+    <view class="intro-section">
+      <view class="intro-title">{{i18n.services.intro_title}}</view>
+      <view class="intro-desc">{{i18n.services.intro_desc}}</view>
+    </view>
+
+    
+    <view class="service-list">
+      <block wx:for="{{services}}" wx:key="id">
+        <info-card
+          iconPath="{{item.iconPath}}"
+          label="{{i18n.services[item.title_key]}}"
+          value="{{i18n.services[item.desc_key]}}"
+          bind:tap="handleContact"
+        />
+      </block>
+    </view>
+
+    
+    <view class="why-section">
+      <view class="why-header">{{i18n.services.why_title}}</view>
+      <view class="why-list">
+        <block wx:for="{{whyItems}}" wx:key="id">
+          <list-item
+            icon="{{item.iconPath}}"
+            title="{{i18n.services[item.title_key]}}"
+            desc="{{i18n.services[item.desc_key]}}"
+            border="{{false}}"
+          />
+        </block>
+      </view>
+      <primary-button
+        text="{{i18n.services.sign_up}}"
+        bind:tap="handleContact"
+      />
+    </view>
+
+    
+    <view class="faq-section">
+      <view class="faq-header">{{i18n.services.faq_title}}</view>
+      <block wx:for="{{faqs}}" wx:key="id">
+        <faq-item
+          question="{{i18n.services[item.question_key]}}"
+          answer="{{i18n.services[item.answer_key]}}"
+          isOpen="{{item.isOpen}}"
+          bind:toggle="toggleFAQ"
+          data-id="{{item.id}}"
+        />
+      </block>
+    </view>
+
+    
+    <view style="height: 40px;"></view>
+  </scroll-view>
+</view>

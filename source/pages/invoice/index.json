@@ -1,0 +1,12 @@
+{
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "onReachBottomDistance": 50,
+    "usingComponents": {
+        "nav-bar": "/components/nav-bar/nav-bar",
+        "invoice-item": "/components/invoice-item/invoice-item",
+        "list-item": "/components/list-item/list-item",
+        "invoice-skeleton": "/components/invoice-skeleton/invoice-skeleton",
+        "svg-icon": "/components/svg-icon/svg-icon"
+    }
+}

@@ -1,0 +1,94 @@
+<view class="container" style="padding-top: {{navHeight}}px;">
+  
+  <nav-bar
+    navHeight="{{navHeight}}"
+    statusBarHeight="{{statusBarHeight}}"
+    title="{{i18n.contract_detail.title || 'Contract Details'}}"
+    showBack="{{true}}"
+    bind:back="handleBack"
+  />
+
+  
+  <view class="skeleton-container" wx:if="{{loading}}">
+    
+    <view class="section-title"></view>
+    <view class="card info-card">
+      <list-item loading="{{true}}" skeletonWidth="30%" />
+      <list-item loading="{{true}}" skeletonWidth="80%" />
+      <list-item loading="{{true}}" skeletonWidth="60%" border="{{false}}" />
+    </view>
+
+    
+    <view class="section-title"></view>
+    <view class="card info-card">
+      <list-item loading="{{true}}" skeletonWidth="40%" />
+      <list-item loading="{{true}}" skeletonWidth="30%" />
+      <list-item loading="{{true}}" skeletonWidth="30%" border="{{false}}" />
+    </view>
+
+    
+    <view class="section-title"></view>
+    <view class="card info-card">
+      <list-item loading="{{true}}" skeletonWidth="70%" border="{{false}}" />
+    </view>
+  </view>
+
+  <scroll-view scroll-y class="content" wx:elif="{{contract}}">
+    
+    <view class="section-title">{{i18n.contract_detail.basic_info || 'BASIC INFO'}}</view>
+    <view class="card info-card">
+      <list-item 
+        title="CUPS" 
+        value="{{contract.cup}}" 
+        copyable="{{true}}" 
+      />
+      <list-item 
+        title="{{i18n.contract_detail.address || 'Address'}}" 
+        value="{{contract.dirSuministro}}" 
+      />
+      <list-item 
+        title="{{i18n.contract_detail.holder || 'Holder'}}" 
+        value="{{contract.titular}}" 
+        border="{{false}}" 
+      />
+    </view>
+
+    
+    <view class="section-title">{{i18n.contract_detail.technical_data || 'TECHNICAL DATA'}}</view>
+    <view class="card info-card">
+      <list-item 
+        title="{{i18n.contract_detail.tariff || 'Tariff'}}" 
+        value="{{contract.tarifaAcceso}}" 
+      />
+      <list-item 
+        title="{{i18n.contract_detail.power_p1 || 'Power P1'}}" 
+        value="{{contract.potencia1 ? contract.potencia1 + ' kW' : '-'}}" 
+      />
+      <list-item 
+        title="{{i18n.contract_detail.power_p2 || 'Power P2'}}" 
+        value="{{contract.potencia2 ? contract.potencia2 + ' kW' : '-'}}" 
+        border="{{false}}" 
+      />
+    </view>
+
+    
+    <view class="section-title">{{i18n.contract_detail.payment || 'PAYMENT'}}</view>
+    <view class="card info-card">
+      <list-item 
+        title="IBAN" 
+        value="{{maskedIban}}" 
+        border="{{false}}" 
+      />
+    </view>
+
+    <view style="height: 40px;"></view>
+  </scroll-view>
+
+  
+  <view class="empty-state" wx:if="{{!contract && !loading}}">
+      <view class="empty-icon">
+        <svg-icon src="/assets/icons/ic_nodata.svg" size="180" color="#999999" />
+      </view>
+      <view class="empty-text">No details found</view>
+  </view>
+</view>

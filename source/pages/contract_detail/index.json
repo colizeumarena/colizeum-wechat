@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/nav-bar/nav-bar",
+    "svg-icon": "/components/svg-icon/svg-icon",
+    "list-item": "/components/list-item/list-item"
+  },
+  "navigationStyle": "custom"
+}

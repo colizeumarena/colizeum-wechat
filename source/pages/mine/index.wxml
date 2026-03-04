@@ -1,0 +1,47 @@
+<view class="container" style="padding-top: {{navHeight}}px;">
+  
+  <view class="custom-header" style="height: {{navHeight}}px; padding-top: {{statusBarHeight}}px;">
+    <view class="header-content">
+      <view class="header-title">{{i18n.mine.title}}</view>
+    </view>
+  </view>
+
+  
+  <view class="content">
+    
+    <hero-banner
+      imageSrc="https://lumisa-strapi.s3.eu-south-2.amazonaws.com/promociones_cover_060bef7f68.webp"
+      title="Lumisa"
+      subtitle=""
+    >
+      <view class="banner-action">
+        <view wx:if="{{!isLoggedIn}}" class="login-btn" bindtap="handleLogin">{{i18n.mine.login}}</view>
+        <view wx:else class="login-btn" style="background: transparent; color: white;">{{i18n.mine.welcome_back}}</view>
+      </view>
+    </hero-banner>
+
+    
+    <view class="section">
+      <view class="section-header">
+        <view class="section-icon">
+          <svg-icon src="/assets/icons/tabbar/ic_mine.svg" size="20" color="#1E293B" />
+        </view>
+        <view class="section-title">{{i18n.mine.my_account}}</view>
+      </view>
+
+      <view class="menu-list card">
+        <block wx:for="{{menuList}}" wx:key="id">
+          <list-item 
+            icon="{{item.iconPath}}"
+            title="{{item.title}}"
+            openType="{{item.openType}}"
+            border="{{item.showDivider}}"
+            isLink="{{true}}"
+            data-item="{{item}}"
+            bind:click="handleMenuClick"
+          />
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

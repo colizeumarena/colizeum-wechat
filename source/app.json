@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/invoice/index",
+    "pages/services/index",
+    "pages/mine/index",
+    "pages/about/index",
+    "pages/packages/index",
+    "pages/contact/index",
+    "pages/login/index",
+    "pages/contract_detail/index",
+    "pages/webview/index"
+  ],
+  "usingComponents": {
+    "nav-bar": "/components/nav-bar/nav-bar",
+    "primary-button": "/components/primary-button/primary-button",
+    "input-group": "/components/input-group/input-group",
+    "svg-icon": "/components/svg-icon/svg-icon"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Lumisa",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#1E293B",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Home",
+        "iconPath": "assets/images/tabbar/ic_home_tb.png",
+        "selectedIconPath": "assets/images/tabbar/ic_home_tb_active.png"
+      },
+      {
+        "pagePath": "pages/invoice/index",
+        "text": "Invoice",
+        "iconPath": "assets/images/tabbar/ic_invoice_tb.png",
+        "selectedIconPath": "assets/images/tabbar/ic_invoice_tb_active.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "Mine",
+        "iconPath": "assets/images/tabbar/ic_mine_tb.png",
+        "selectedIconPath": "assets/images/tabbar/ic_mine_tb_active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
