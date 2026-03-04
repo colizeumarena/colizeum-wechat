@@ -1,0 +1,100 @@
+/**app.wxss**/
+
+/* COLIZEUM Font */
+@font-face {
+  font-family: "COLIZEUM";
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/thearteastagency/colizeum-fonts@main/78170a65296b6b612258.woff")
+    format("woff");
+}
+
+/* TT Squares Font Family */
+@font-face {
+  font-family: "TT Squares";
+  font-style: normal;
+  font-weight: 100;
+  src: url("https://cdn.jsdelivr.net/gh/thearteastagency/colizeum-fonts@main/947f8a4cda402796c6ef.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "TT Squares";
+  font-style: italic;
+  font-weight: 100;
+  src: url("https://cdn.jsdelivr.net/gh/thearteastagency/colizeum-fonts@main/daf456d5a4700fb66338.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "TT Squares";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/thearteastagency/colizeum-fonts@main/f92e39ed4681889756db.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "TT Squares";
+  font-style: italic;
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/thearteastagency/colizeum-fonts@main/02022f04121a202ccb29.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "TT Squares";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/thearteastagency/colizeum-fonts@main/78bde154266d801a8ec8.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "TT Squares";
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/thearteastagency/colizeum-fonts@main/388a7339a74f867357ff.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "TT Squares";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/thearteastagency/colizeum-fonts@main/df2f409c98241171efd2.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "TT Squares";
+  font-style: italic;
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/thearteastagency/colizeum-fonts@main/a00dea6b5501d3377bbe.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "TT Squares";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.jsdelivr.net/gh/thearteastagency/colizeum-fonts@main/60429e17ab1345517cd7.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "TT Squares";
+  font-style: italic;
+  font-weight: 900;
+  src: url("https://cdn.jsdelivr.net/gh/thearteastagency/colizeum-fonts@main/a8a58e4551ea5739bdf8.woff")
+    format("woff");
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,349 @@
+/**index.wxss**/
+
+/* Base */
+.page {
+  background: #000;
+  font-family: "TT Squares", sans-serif;
+  height: 100vh;
+}
+
+/* Typography */
+.text_big {
+  font-size: 50rpx;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.text_middle {
+  font-size: 30rpx;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.text__font_colizeum {
+  font-family: "COLIZEUM";
+}
+
+.text__color_white {
+  color: #fff;
+}
+
+.text__color_yellow {
+  color: #ffee00;
+}
+
+/* Header */
+.header {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 25rpx;
+  padding-top: calc(25rpx + env(safe-area-inset-top));
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  text-align: center;
+}
+
+.header__logo {
+  width: 380rpx;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  padding: calc(140rpx + env(safe-area-inset-top)) 50rpx 0;
+  height: calc(100vh - 50px - 80rpx);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.hero__decor-2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100rpx;
+  height: 100%;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.hero__text-container {
+  position: relative;
+  z-index: 10;
+  padding-top: 80rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.hero__title {
+  margin-bottom: 100rpx;
+}
+
+.hero__title-line:first-child {
+  margin-bottom: 15rpx;
+}
+
+.hero__description {
+  margin-bottom: 60rpx;
+  opacity: 0.9;
+}
+
+.hero__book-container {
+  display: flex;
+  align-items: center;
+  gap: 30rpx;
+}
+
+.hero__text-container-decor {
+  width: 200rpx;
+}
+
+.hero__img {
+  position: absolute;
+  right: -80rpx;
+  bottom: 0;
+  width: 1250rpx;
+  max-width: 90vw;
+  opacity: 0.8;
+  z-index: 5;
+}
+
+/* Address Bar */
+.hero__address {
+  background: #ffee00;
+  padding: 20rpx 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30rpx;
+  margin-top: auto;
+  position: relative;
+  z-index: 15;
+}
+
+.hero__address-icon {
+  width: 50rpx;
+  height: 90rpx;
+}
+
+.hero__address-text {
+  text-align: right;
+  color: #000;
+  font-size: 28rpx;
+  line-height: 1.3;
+}
+
+/* Button */
+.button__book {
+  background: #ffee00;
+  color: #000;
+  font-size: 36rpx;
+  font-weight: 900;
+  padding: 22rpx 45rpx;
+  box-shadow: 6rpx 0 0 #000;
+  border: none;
+  line-height: normal;
+}
+
+.button__book::after {
+  border: none;
+}
+
+.button__book-centered {
+  display: block;
+  margin: 60rpx auto 80rpx;
+}
+
+/* Section Base */
+.section {
+  padding: 0 50rpx 60rpx;
+  background: #000;
+}
+
+.section__title {
+  font-family: "TT Squares Condensed", sans-serif;
+  font-size: 56rpx;
+  font-weight: 900;
+  color: #ffee00;
+  text-align: center;
+  margin: 100rpx 0 40rpx;
+}
+
+/* About Section */
+.about-subtitle {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+.about-text {
+  font-size: 30rpx;
+  line-height: 1.8;
+  color: #ccc;
+  text-align: justify;
+}
+
+/* Promo Section - A4 portrait (210:297) */
+.promo-swiper {
+  width: 100%;
+  /* A4 aspect ratio: height = width × (297/210) ≈ 1.414; 650rpx × 1.414 ≈ 919rpx */
+  height: 920rpx;
+}
+
+.promo-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* Photos Section */
+.photos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+.photo-item {
+  width: 100%;
+  height: 400rpx;
+  overflow: hidden;
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* Map Section */
+
+.map-container {
+  width: 100%;
+  height: 500rpx;
+  margin-bottom: 40rpx;
+}
+
+.map-address {
+  padding: 0 50rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+  align-items: center;
+  text-align: center;
+}
+
+.map-address-title {
+  font-family: "COLIZEUM", sans-serif;
+  font-size: 36rpx;
+  font-weight: 900;
+  color: #ffee00;
+  margin-bottom: 10rpx;
+}
+
+.map-address-text {
+  font-size: 28rpx;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* WeChat Section */
+.wechat-section {
+  display: flex;
+  flex-direction: row;
+  gap: 30rpx;
+  margin-top: 30rpx;
+}
+
+.wechat-card {
+  background: #ffee00;
+  border: none;
+  padding: 40rpx 30rpx;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  text-align: left;
+  line-height: normal;
+}
+
+.wechat-card::after {
+  border: none;
+}
+
+.wechat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150rpx;
+  height: 150rpx;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+}
+
+.wechat-card-secondary {
+  background: #111;
+  border: 2rpx solid #ffee00;
+}
+
+.wechat-card-secondary::before {
+  background: rgba(255, 238, 0, 0.1);
+}
+
+.wechat-card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+
+.wechat-card-title {
+  font-size: 36rpx;
+  font-weight: 900;
+  color: #000;
+}
+
+.wechat-card-secondary .wechat-card-title {
+  color: #ffee00;
+}
+
+.wechat-card-subtitle {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 1.5;
+}
+
+.wechat-card-secondary .wechat-card-subtitle {
+  color: #999;
+}
+
+.wechat-card-action {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #000;
+  margin-top: 10rpx;
+}
+
+.wechat-card-secondary .wechat-card-action {
+  color: #ffee00;
+}

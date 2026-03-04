@@ -1,0 +1,221 @@
+/**more.wxss**/
+.page {
+  background: #000;
+  height: 100vh;
+  font-family: "TT Squares", sans-serif;
+}
+
+/* Header */
+.header {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 25rpx;
+  padding-top: calc(25rpx + env(safe-area-inset-top));
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  text-align: center;
+}
+
+.header__logo {
+  width: 380rpx;
+}
+
+/* Content */
+.content {
+  padding: calc(120rpx + env(safe-area-inset-top)) 50rpx 80rpx;
+}
+
+/* Section Base */
+.section {
+  padding: 0 0 60rpx;
+  background: #000;
+}
+
+.section__title {
+  font-family: "TT Squares Condensed", sans-serif;
+  font-size: 56rpx;
+  font-weight: 900;
+  color: #ffee00;
+  text-align: center;
+  margin: 60rpx 0 40rpx;
+}
+
+/* Contact Card */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+.contact-item {
+  background: #111;
+  border: 2rpx solid #ffee00;
+  padding: 30rpx 40rpx;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.contact-label {
+  font-size: 24rpx;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Timetable */
+.timetable {
+  background: #111;
+  border: 2rpx solid #ffee00;
+  padding: 30rpx 40rpx;
+}
+
+.timetable-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #333;
+}
+
+.timetable-row:last-child {
+  border-bottom: none;
+}
+
+.timetable-day {
+  font-size: 28rpx;
+  color: #fff;
+  font-weight: 700;
+}
+
+.timetable-hours {
+  font-size: 28rpx;
+  color: #ffee00;
+  font-weight: 700;
+}
+
+/* WeChat Section */
+.wechat-section {
+  display: flex;
+  flex-direction: row;
+  gap: 30rpx;
+  margin-top: 30rpx;
+}
+
+.wechat-card {
+  background: #ffee00;
+  border: none;
+  padding: 40rpx 30rpx;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  text-align: left;
+  line-height: normal;
+}
+
+.wechat-card::after {
+  border: none;
+}
+
+.wechat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150rpx;
+  height: 150rpx;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+}
+
+.wechat-card-secondary {
+  background: #111;
+  border: 2rpx solid #ffee00;
+}
+
+.wechat-card-secondary::before {
+  background: rgba(255, 238, 0, 0.1);
+}
+
+.wechat-card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+
+.wechat-card-title {
+  font-size: 36rpx;
+  font-weight: 900;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.wechat-card-secondary .wechat-card-title {
+  color: #ffee00;
+}
+
+.wechat-card-subtitle {
+  font-size: 24rpx;
+  color: #333;
+  line-height: 1.5;
+}
+
+.wechat-card-secondary .wechat-card-subtitle {
+  color: #999;
+}
+
+.wechat-card-action {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #000;
+  margin-top: 10rpx;
+}
+
+.wechat-card-secondary .wechat-card-action {
+  color: #ffee00;
+}
+
+/* Social Media Grid */
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30rpx;
+}
+
+.social-card {
+  background: #ffee00;
+  padding: 40rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20rpx;
+  text-align: center;
+}
+
+.social-name {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.social-handle {
+  font-size: 24rpx;
+  color: #333;
+}

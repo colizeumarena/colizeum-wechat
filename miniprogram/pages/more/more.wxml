@@ -1,0 +1,96 @@
+<!--more.wxml-->
+<scroll-view class="page" scroll-y>
+  <!-- Header -->
+  <view class="header">
+    <image class="header__logo" src="/assets/c2d350576eecc3b611b7.png" mode="widthFix" />
+  </view>
+
+  <view class="content">
+    <!-- Contact Section -->
+    <view class="section">
+      <text class="section__title">联系我们</text>
+      
+      <view class="contact-card">
+        <view class="contact-item" bindtap="callPhone">
+          <view class="contact-info">
+            <text class="contact-label">电话预订</text>
+            <text class="contact-value">+34 624 075 035</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="wechat-section">
+        <button class="wechat-card" open-type="contact">
+          <view class="wechat-card-content">
+            <text class="wechat-card-title">微信客服</text>
+            <text class="wechat-card-subtitle">在线咨询 · 快速响应</text>
+            <view class="wechat-card-action">点击联系 →</view>
+          </view>
+        </button>
+
+        <button class="wechat-card wechat-card-secondary" bindtap="openWebview">
+          <view class="wechat-card-content">
+            <text class="wechat-card-title">微信公众号</text>
+            <text class="wechat-card-subtitle">最新活动 · 优惠信息</text>
+            <view class="wechat-card-action">点击关注 →</view>
+          </view>
+        </button>
+      </view>
+    </view>
+
+    <!-- Timetable Section -->
+    <view class="section">
+      <text class="section__title">营业时间</text>
+      <view class="timetable">
+        <view class="timetable-row">
+          <text class="timetable-day">周一周二</text>
+          <text class="timetable-hours">15:00 - 00:00</text>
+        </view>
+        <view class="timetable-row">
+          <text class="timetable-day">周三</text>
+          <text class="timetable-hours">15:00 - 06:00</text>
+        </view>
+        <view class="timetable-row">
+          <text class="timetable-day">周四周五</text>
+          <text class="timetable-hours">14:00 - 06:00</text>
+        </view>
+        <view class="timetable-row">
+          <text class="timetable-day">周六</text>
+          <text class="timetable-hours">12:00 - 06:00</text>
+        </view>
+        <view class="timetable-row">
+          <text class="timetable-day">周日</text>
+          <text class="timetable-hours">14:00 - 06:00</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- Social Media Section -->
+    <view class="section">
+      <text class="section__title">关注我们</text>
+      
+      <view class="social-grid">
+        <view class="social-card" bindtap="copySocialHandle" data-handle="@colizeum_madrid">
+          <text class="social-name">Instagram</text>
+          <text class="social-handle">@colizeum_madrid</text>
+        </view>
+
+        <view class="social-card" bindtap="copySocialHandle" data-handle="@colizeum_madrid">
+          <text class="social-name">TikTok</text>
+          <text class="social-handle">@colizeum_madrid</text>
+        </view>
+
+        <!-- <view class="social-card">
+          <text class="social-name">抖音</text>
+          <text class="social-handle">@colizeum_madrid</text>
+        </view> -->
+
+        <view class="social-card" bindtap="copySocialHandle" data-handle="@colizeum_madrid">
+          <text class="social-name">小红书</text>
+          <text class="social-handle">@colizeum_madrid</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</scroll-view>

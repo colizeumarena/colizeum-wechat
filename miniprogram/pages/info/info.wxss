@@ -1,0 +1,261 @@
+/**info.wxss**/
+.page {
+  background: #000;
+  height: 100vh;
+  font-family: "TT Squares", sans-serif;
+}
+
+/* Header */
+.header {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 25rpx;
+  padding-top: calc(25rpx + env(safe-area-inset-top));
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  text-align: center;
+}
+
+.header__logo {
+  width: 380rpx;
+}
+
+/* Sections */
+.price-section {
+  padding: 140rpx 40rpx 40rpx;
+  padding-top: calc(140rpx + env(safe-area-inset-top));
+}
+
+.hardware-section {
+  padding: 40rpx;
+}
+
+.section-title {
+  font-size: 60rpx;
+  font-weight: 700;
+  color: #ffee00;
+  text-align: center;
+  margin-bottom: 40rpx;
+  text-transform: uppercase;
+}
+
+/* Switchers - Shared Styles */
+.zone-switcher,
+.hardware-switcher {
+  margin-bottom: 60rpx;
+}
+
+.zone-switcher {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20rpx;
+  max-width: 700rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hardware-switcher {
+  display: flex;
+  gap: 30rpx;
+  justify-content: center;
+}
+
+.zone-tab,
+.hardware-tab {
+  background: transparent;
+  border: 2rpx solid #ffee00;
+  padding: 25rpx 20rpx;
+  font-size: 26rpx;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.zone-tab {
+  color: #fff;
+}
+
+.hardware-tab {
+  color: #ffee00;
+  padding: 20rpx 50rpx;
+  font-size: 28rpx;
+}
+
+.zone-tab-active,
+.hardware-tab-active {
+  background: #ffee00;
+  color: #000;
+}
+
+/* Pricing Content */
+.pricing-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60rpx;
+}
+
+.period-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.period-title {
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+}
+
+.period-subtitle {
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+}
+
+.cards-row {
+  display: flex;
+  gap: 30rpx;
+  justify-content: center;
+}
+
+/* Price Card */
+.price-card {
+  background: #111;
+  border: 2rpx solid #ffee00;
+  padding: 30rpx;
+  flex: 1;
+  max-width: 320rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+
+.card-heading {
+  font-size: 32rpx;
+  color: #ffee00;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 15rpx;
+  border-bottom: 2rpx solid #ffee00;
+  text-transform: uppercase;
+}
+
+.card-price {
+  font-size: 40rpx;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card-detail,
+.card-time {
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+}
+
+.card-note {
+  font-size: 20rpx;
+  color: #666;
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+/* Hardware Cards */
+.hardware-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40rpx;
+}
+
+.hardware-card {
+  background: #ffee00;
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 25rpx;
+}
+
+.hardware-card-title {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10rpx;
+  text-transform: uppercase;
+}
+
+.hardware-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #000;
+  padding-bottom: 15rpx;
+}
+
+.hardware-label,
+.hardware-value {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #000;
+}
+
+.hardware-value {
+  text-align: right;
+}
+
+/* Promos Section */
+.promos-section {
+  padding: 40rpx;
+}
+
+.promos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30rpx;
+}
+
+.promo-item {
+  background: #111;
+  border: 2rpx solid #ffee00;
+  padding: 30rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+
+.promo-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #ffee00;
+  text-transform: uppercase;
+}
+
+.promo-desc {
+  font-size: 26rpx;
+  color: #999;
+  line-height: 1.5;
+}
+
+/* Button */
+.button__book {
+  background: #ffee00;
+  color: #000;
+  font-size: 36rpx;
+  font-weight: 900;
+  padding: 22rpx 45rpx;
+  box-shadow: 6rpx 0 0 #000;
+  border: none;
+  line-height: normal;
+}
+
+.button__book::after {
+  border: none;
+}
+
+.button__book-centered {
+  display: block;
+  text-align: center;
+  margin: 60rpx auto 80rpx;
+  width: fit-content;
+}

@@ -1,0 +1,172 @@
+<!--info.wxml-->
+<scroll-view class="page" scroll-y>
+  <!-- Header -->
+  <view class="header">
+    <image class="header__logo" src="/assets/c2d350576eecc3b611b7.png" mode="widthFix" />
+  </view>
+
+  <!-- Price Section -->
+  <view class="price-section">
+    <text class="section-title">价格</text>
+    
+    <!-- Zone Switcher -->
+    <view class="zone-switcher">
+      <view 
+        class="zone-tab {{selectedZone === 0 ? 'zone-tab-active' : ''}}" 
+        bindtap="switchZone" 
+        data-index="0">
+        普通区
+      </view>
+      <view 
+        class="zone-tab {{selectedZone === 1 ? 'zone-tab-active' : ''}}" 
+        bindtap="switchZone" 
+        data-index="1">
+        专业区
+      </view>
+      <view 
+        class="zone-tab {{selectedZone === 2 ? 'zone-tab-active' : ''}}" 
+        bindtap="switchZone" 
+        data-index="2">
+        租赁电视 65"
+      </view>
+      <view 
+        class="zone-tab {{selectedZone === 3 ? 'zone-tab-active' : ''}}" 
+        bindtap="switchZone" 
+        data-index="3">
+        租赁贵宾电视 85"
+      </view>
+    </view>
+
+    <!-- Pricing Cards -->
+    <view class="pricing-content">
+      <!-- Weekday -->
+      <view class="period-section">
+        <text class="period-title">周一至周五</text>
+        <view class="cards-row">
+          <view class="price-card">
+            <text class="card-heading">夜间</text>
+            <text class="card-price">{{prices[selectedZone].weekday.night.price}} €</text>
+            <text class="card-detail">8小时</text>
+            <text class="card-time">22:00 — 08:00</text>
+            <text class="card-note">8小时夜间套餐可在22:00至04:00之间购买</text>
+          </view>
+          <view class="price-card">
+            <text class="card-heading">白天</text>
+            <text class="card-price">{{prices[selectedZone].weekday.day.hour1}} €</text>
+            <text class="card-detail">1小时</text>
+            <text class="card-price">{{prices[selectedZone].weekday.day.hour3}} €</text>
+            <text class="card-detail">3小时</text>
+            <text class="card-price">{{prices[selectedZone].weekday.day.hour5}} €</text>
+            <text class="card-detail">5小时</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- Weekend -->
+      <view class="period-section">
+        <text class="period-title">周末和节假日</text>
+        <text class="period-subtitle">（* 周末和节假日前夕从17:00起）</text>
+        <view class="cards-row">
+          <view class="price-card">
+            <text class="card-heading">夜间</text>
+            <text class="card-price">{{prices[selectedZone].weekend.night.price}} €</text>
+            <text class="card-detail">8小时</text>
+            <text class="card-time">22:00 — 08:00</text>
+            <text class="card-note">8小时夜间套餐可在22:00至04:00之间购买</text>
+          </view>
+          <view class="price-card">
+            <text class="card-heading">白天</text>
+            <text class="card-price">{{prices[selectedZone].weekend.day.hour1}} €</text>
+            <text class="card-detail">1小时</text>
+            <text class="card-price">{{prices[selectedZone].weekend.day.hour3}} €</text>
+            <text class="card-detail">3小时</text>
+            <text class="card-price">{{prices[selectedZone].weekend.day.hour5}} €</text>
+            <text class="card-detail">5小时</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Hardware Section -->
+  <view class="hardware-section">
+    <text class="section-title">设备</text>
+    
+    <!-- Hardware Type Switcher -->
+    <view class="hardware-switcher">
+      <view 
+        class="hardware-tab {{selectedHardware === 0 ? 'hardware-tab-active' : ''}}" 
+        bindtap="switchHardware" 
+        data-index="0">
+        标准
+      </view>
+      <view 
+        class="hardware-tab {{selectedHardware === 1 ? 'hardware-tab-active' : ''}}" 
+        bindtap="switchHardware" 
+        data-index="1">
+        训练营
+      </view>
+    </view>
+
+    <!-- Hardware Cards -->
+    <view class="hardware-cards">
+      <view class="hardware-card">
+        <text class="hardware-card-title">主机配置</text>
+        <view class="hardware-row">
+          <text class="hardware-label">处理器</text>
+          <text class="hardware-value">{{hardware[selectedHardware].pc.cpu}}</text>
+        </view>
+        <view class="hardware-row">
+          <text class="hardware-label">显卡</text>
+          <text class="hardware-value">{{hardware[selectedHardware].pc.gpu}}</text>
+        </view>
+        <view class="hardware-row">
+          <text class="hardware-label">内存</text>
+          <text class="hardware-value">{{hardware[selectedHardware].pc.ram}}</text>
+        </view>
+      </view>
+
+      <view class="hardware-card">
+        <text class="hardware-card-title">外设配置</text>
+        <view class="hardware-row">
+          <text class="hardware-label">显示器</text>
+          <text class="hardware-value">{{hardware[selectedHardware].peripherals.monitor}}</text>
+        </view>
+        <view class="hardware-row">
+          <text class="hardware-label">鼠标</text>
+          <text class="hardware-value">{{hardware[selectedHardware].peripherals.mouse}}</text>
+        </view>
+        <view class="hardware-row">
+          <text class="hardware-label">耳机</text>
+          <text class="hardware-value">{{hardware[selectedHardware].peripherals.headset}}</text>
+        </view>
+        <view class="hardware-row">
+          <text class="hardware-label">键盘</text>
+          <text class="hardware-value">{{hardware[selectedHardware].peripherals.keyboard}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Promos Section -->
+  <view class="promos-section">
+    <text class="section-title">优惠活动</text>
+    <view class="promos-list">
+      <view class="promo-item">
+        <text class="promo-title">新客户买一送一</text>
+        <text class="promo-desc">新客户首次体验可享1小时免费（仅限购买一小时体验时使用）</text>
+      </view>
+      <view class="promo-item">
+        <text class="promo-title">留下点评 · 免费1小时</text>
+        <text class="promo-desc">在小红书或朋友圈留下点评，即可获得额外1小时免费体验</text>
+      </view>
+      <view class="promo-item">
+        <text class="promo-title">带朋友来 · 免费获1小时</text>
+        <text class="promo-desc">带朋友一起来，即可获得1小时免费体验</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Book Button -->
+  <button class="button__book button__book-centered" open-type="contact">预订</button>
+</scroll-view>

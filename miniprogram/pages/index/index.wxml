@@ -1,0 +1,149 @@
+<!--index.wxml-->
+<scroll-view class="page" scroll-y>
+  <!-- Header -->
+  <view class="header">
+    <image class="header__logo" src="/assets/c2d350576eecc3b611b7.png" mode="widthFix" />
+  </view>
+
+  <!-- Hero Section -->
+  <view class="hero">
+    <image class="hero__decor-2" src="/assets/9ea4f4a20d006956e479.png" mode="aspectFit" />
+    <view class="hero__text-container">
+      <view class="hero__title">
+        <text class="text_big text__color_white hero__title-line">CYBERARENA</text>
+        <text class="text_big text__font_colizeum text__color_yellow hero__title-line">COLIZEUM MADRID</text>
+      </view>
+      <text class="text_middle text__color_white hero__description">
+        <text class="text__font_colizeum text__color_yellow">COLIZEUM MADRID</text>
+          是一家拥有顶级设备的电竞俱乐部，满足现代电子游戏的所有要求
+      </text>
+      <view class="hero__book-container">
+        <button class="button__book" open-type="contact">预订</button>
+        <image class="hero__text-container-decor" src="/assets/3c6e733f074223a6474d.png" mode="widthFix" />
+      </view>
+    </view>
+    <image class="hero__img" src="/assets/795482530f3897564e0c.png" mode="widthFix" />
+  </view>
+  
+  <!-- Address Bar -->
+  <view class="hero__address">
+    <image class="hero__address-icon" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='45' height='73' viewBox='0 0 45 73' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M41.0301 32.0361C42.6732 29.0458 43.6078 25.6111 43.6078 21.9581C43.6078 10.3833 34.2246 1 22.6497 1C11.0749 1 1.69165 10.3833 1.69165 21.9581C1.69165 25.6224 2.63204 29.0671 4.28465 32.0639L22.9551 71L41.0301 32.0361Z' fill='white'/%3E%3Cpath d='M41.0301 32.0361L40.3085 31.6396L40.295 31.6642L40.2832 31.6897L41.0301 32.0361ZM4.28465 32.0639L5.02707 31.7079L5.01695 31.6868L5.00565 31.6663L4.28465 32.0639ZM22.9551 71L22.2127 71.356L22.9674 72.93L23.702 71.3465L22.9551 71ZM42.7845 21.9581C42.7845 25.469 41.8866 28.7677 40.3085 31.6396L41.7517 32.4326C43.4599 29.3239 44.4312 25.7532 44.4312 21.9581H42.7845ZM22.6497 1.82336C33.7698 1.82336 42.7845 10.838 42.7845 21.9581H44.4312C44.4312 9.92853 34.6793 0.176642 22.6497 0.176642V1.82336ZM2.51501 21.9581C2.51501 10.838 11.5296 1.82336 22.6497 1.82336V0.176642C10.6202 0.176642 0.868293 9.92853 0.868293 21.9581H2.51501ZM5.00565 31.6663C3.41848 28.7881 2.51501 25.4799 2.51501 21.9581H0.868293C0.868293 25.7649 1.84561 29.346 3.56365 32.4615L5.00565 31.6663ZM23.6975 70.644L5.02707 31.7079L3.54224 32.4199L22.2127 71.356L23.6975 70.644ZM40.2832 31.6897L22.2082 70.6535L23.702 71.3465L41.777 32.3826L40.2832 31.6897Z' fill='black'/%3E%3Cpath d='M22.6498 39.5624C32.3727 39.5624 40.2546 31.7743 40.2546 22.1672C40.2546 12.5601 32.3727 4.77197 22.6498 4.77197C12.927 4.77197 5.04504 12.5601 5.04504 22.1672C5.04504 31.7743 12.927 39.5624 22.6498 39.5624Z' fill='black' stroke='black' stroke-width='0.329343' stroke-miterlimit='10'/%3E%3Cpath d='M12.393 17.2633H35.5549C33.6495 12.1575 28.4802 8.49286 22.401 8.49286C16.3219 8.49286 11.1543 12.1558 9.24353 17.2633H12.393Z' fill='%23F6E933'/%3E%3Cpath d='M23.9484 25.7798C23.4362 25.1805 22.9885 24.5309 22.6122 23.8414C22.2355 24.5306 21.7878 25.1802 21.2761 25.7798H9.24353C11.0179 31.2621 16.3355 35.243 22.6176 35.243C28.8997 35.243 34.2191 31.2621 35.9935 25.7798H23.9484Z' fill='%23F6E933'/%3E%3Cpath d='M17.2988 19.1748L15.8211 20.4132L14.3434 19.1748C14.2173 19.0787 14.052 19.0271 13.8817 19.0305C13.7114 19.0339 13.5492 19.0921 13.4288 19.193C13.3083 19.294 13.2389 19.4299 13.2348 19.5726C13.2307 19.7153 13.2924 19.8539 13.407 19.9595L14.8847 21.1979L13.407 22.4363C13.3406 22.4869 13.2871 22.5483 13.2499 22.6166C13.2126 22.685 13.1923 22.759 13.1901 22.8342C13.188 22.9094 13.2041 22.9841 13.2374 23.0539C13.2708 23.1237 13.3207 23.1871 13.3841 23.2403C13.4475 23.2934 13.5232 23.3352 13.6065 23.3632C13.6898 23.3911 13.7789 23.4046 13.8686 23.4028C13.9583 23.401 14.0466 23.384 14.1282 23.3528C14.2098 23.3215 14.283 23.2767 14.3434 23.2211L15.8211 21.9827L17.2988 23.2211C17.3591 23.2767 17.4323 23.3215 17.5139 23.3528C17.5955 23.384 17.6839 23.401 17.7735 23.4028C17.8632 23.4046 17.9524 23.3911 18.0357 23.3632C18.119 23.3352 18.1946 23.2934 18.2581 23.2403C18.3215 23.1871 18.3714 23.1237 18.4047 23.0539C18.4381 22.9841 18.4542 22.9094 18.452 22.8342C18.4499 22.759 18.4296 22.685 18.3923 22.6166C18.355 22.5483 18.3016 22.4869 18.2352 22.4363L16.7594 21.1979L18.2371 19.9595C18.3581 19.8547 18.425 19.7142 18.4235 19.5684C18.422 19.4225 18.3521 19.2831 18.2289 19.1801C18.1057 19.077 17.9392 19.0187 17.7651 19.0178C17.5911 19.0168 17.4236 19.0732 17.2988 19.1748Z' fill='white'/%3E%3Cpath d='M28.5385 24.7188C27.9314 24.7188 27.3379 24.5259 26.8331 24.1645C26.3283 23.8031 25.9349 23.2895 25.7025 22.6885C25.4702 22.0875 25.4094 21.4262 25.5279 20.7882C25.6463 20.1502 25.9387 19.5642 26.368 19.1043C26.7973 18.6443 27.3442 18.3311 27.9397 18.2041C28.5351 18.0772 29.1523 18.1424 29.7132 18.3913C30.2742 18.6402 30.7536 19.0618 31.0909 19.6026C31.4282 20.1435 31.6082 20.7794 31.6082 21.4299C31.6055 22.3013 31.2812 23.1361 30.7061 23.7523C30.131 24.3685 29.3518 24.7159 28.5385 24.7188ZM28.5385 19.515C28.186 19.5146 27.8413 19.6263 27.548 19.8359C27.2547 20.0455 27.026 20.3436 26.8909 20.6924C26.7557 21.0413 26.7202 21.4253 26.7888 21.7958C26.8573 22.1663 27.0269 22.5067 27.2761 22.7739C27.5252 23.0411 27.8428 23.2232 28.1885 23.297C28.5343 23.3708 28.8927 23.3331 29.2184 23.1886C29.5442 23.0442 29.8226 22.7994 30.0185 22.4854C30.2144 22.1714 30.3189 21.8021 30.3189 21.4244C30.3185 20.9185 30.1308 20.4333 29.7971 20.0754C29.4633 19.7175 29.0107 19.516 28.5385 19.515Z' fill='white'/%3E%3C/svg%3E" mode="widthFix" />
+    <view class="hero__address-text">
+      <text>CALLE DE FERNANDO EL</text>
+      <text>CATÓLICO 84 BAJO 28015 MADRID</text>
+    </view>
+  </view>
+
+  <!-- About Section -->
+  <view class="section">
+    <text class="section__title">马德里最佳电竞馆</text>
+    <text class="about-subtitle">西班牙华人玩家都来这里</text>
+    <view class="about-content">
+      <text class="about-text">COLIZEUM MADRID 是马德里华人圈最火的电竞馆，配置顶级，环境舒适。</text>
+      <text class="about-text">全馆配备 RTX 4090 显卡，144Hz 电竞屏，机械键盘鼠标，想玩什么都能带飞。</text>
+      <text class="about-text">网速超快，延迟超低，开黑打团再也不用担心卡顿掉线。</text>
+      <text class="about-text">一个人来练技术，约朋友组队开黑，或者办比赛活动，都没问题！</text>
+    </view>
+    <button class="button__book button__book-centered" open-type="contact">预订</button>
+  </view>
+
+  <!-- Promo Section -->
+  <view class="section">
+    <text class="section__title">优惠活动</text>
+    <swiper 
+      class="promo-swiper" 
+      indicator-dots="{{true}}"
+      indicator-color="rgba(255,255,255,0.3)"
+      indicator-active-color="#ffee00"
+      autoplay="{{true}}"
+      interval="5000"
+      circular="{{true}}"
+    >
+      <swiper-item>
+        <view class="promo-slide">
+          <image class="promo-image" src="/promos/1.png" mode="aspectFit" />
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="promo-slide">
+          <image class="promo-image" src="/promos/2.png" mode="aspectFit" />
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="promo-slide">
+          <image class="promo-image" src="/promos/3.png" mode="aspectFit" />
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="promo-slide">
+          <image class="promo-image" src="/promos/4.png" mode="aspectFit" />
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- Photos Section -->
+  <view class="section">
+    <text class="section__title">场馆照片</text>
+    <view class="photos-grid">
+      <view class="photo-item">
+        <image class="photo-image" src="/assets/b971e15c639ef1e4bdd7.jpg" mode="aspectFill" />
+      </view>
+      <view class="photo-item">
+        <image class="photo-image" src="/assets/f49ba04c3ca84802a1e3.jpg" mode="aspectFill" />
+      </view>
+      <view class="photo-item">
+        <image class="photo-image" src="/assets/7f58ac0c39a97a4d8ab2.jpg" mode="aspectFill" />
+      </view>
+      <view class="photo-item">
+        <image class="photo-image" src="/assets/7c4b959dc4c02ef8be37.jpg" mode="aspectFill" />
+      </view>
+      <view class="photo-item">
+        <image class="photo-image" src="/assets/797cd758842575077029.jpg" mode="aspectFill" />
+      </view>
+      <view class="photo-item">
+        <image class="photo-image" src="/assets/1788d8e073bf2f0e5e5c.jpg" mode="aspectFill" />
+      </view>
+    </view>
+  </view>
+
+  <!-- WeChat Section -->
+  <view class="section">
+    <view class="wechat-section">
+      <button class="wechat-card" open-type="contact">
+        <view class="wechat-card-content">
+          <text class="wechat-card-title">微信客服</text>
+          <text class="wechat-card-subtitle">在线咨询 · 快速响应</text>
+          <view class="wechat-card-action">点击联系 →</view>
+        </view>
+      </button>
+
+      <button class="wechat-card wechat-card-secondary" bindtap="openWebview">
+        <view class="wechat-card-content">
+          <text class="wechat-card-title">微信公众号</text>
+          <text class="wechat-card-subtitle">最新活动 · 优惠信息</text>
+          <view class="wechat-card-action">点击关注 →</view>
+        </view>
+      </button>
+    </view>
+  </view>
+
+  <!-- Map Section -->
+  <view class="section">
+    <text class="section__title">位置</text>
+    <map 
+      class="map-container"
+      latitude="40.4345526"
+      longitude="-3.7168796"
+      markers="{{markers}}"
+      show-location="{{true}}"
+      scale="16"
+      bindmarkertap="openLocation"
+    />
+    <view class="map-address">
+      <text class="map-address-title">COLIZEUM MADRID</text>
+      <text class="map-address-text">CALLE DE FERNANDO EL CATÓLICO 84 BAJO</text>
+      <text class="map-address-text">28015 MADRID, ESPAÑA</text>
+    </view>
+  </view>
+</scroll-view>
