@@ -1,0 +1,6 @@
+<image 
+  src="{{dataSrc}}" 
+  class="svg-icon custom-class" 
+  style="{{innerStyle}}" 
+  mode="aspectFit" 
+/>

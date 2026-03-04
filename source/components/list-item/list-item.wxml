@@ -1,0 +1,75 @@
+<block wx:if="{{openType}}">
+  <view class="list-item-wrapper {{card ? 'card-mode' : ''}} {{active ? 'active' : ''}}">
+    <button 
+      class="list-item-btn left-btn {{size}}" 
+      open-type="{{openType}}" 
+      bindtap="handleTap" 
+      hover-class="list-item-hover"
+    >
+      <template is="item-content" data="{{icon, title, desc, value, loading, skeletonWidth, iconColor}}" />
+    </button>
+    
+    <button 
+      class="list-item-btn right-btn" 
+      open-type="{{openType}}" 
+      wx:if="{{isLink}}" 
+      bindtap="handleTap" 
+      hover-class="list-item-hover"
+    >
+      <svg-icon src="/assets/icons/ic_arrow_right.svg" size="16" color="#94A3B8" />
+    </button>
+  </view>
+  <view wx:if="{{border && !card}}" class="list-item-divider"></view>
+</block>
+
+<block wx:else>
+  <view 
+    class="list-item {{size}} {{card ? 'card-mode' : ''}} {{active ? 'active' : ''}} {{border && !card ? 'with-border' : ''}}" 
+    bindtap="handleTap"
+    hover-class="{{isLink || copyable || url ? 'list-item-hover' : ''}}"
+  >
+    <template is="item-content" data="{{icon, title, desc, value, loading, skeletonWidth, iconColor, copyable}}" />
+    
+    <!-- Right Arrow -->
+    <view class="item-right" wx:if="{{isLink}}">
+      <svg-icon src="/assets/icons/ic_arrow_right.svg" size="16" color="#94A3B8" />
+    </view>
+  </view>
+</block>
+
+<!-- Content Template -->
+<template name="item-content">
+  <!-- Left Icon -->
+  <view class="item-icon" wx:if="{{icon}}">
+    <svg-icon src="{{icon}}" size="{{size === 'small' ? 16 : 20}}" color="{{iconColor}}" />
+  </view>
+  
+  <!-- Main Content -->
+  <view class="item-body">
+    <block wx:if="{{loading}}">
+      <view class="skeleton-title" style="width: {{skeletonWidth}}"></view>
+      <view class="skeleton-desc" wx:if="{{desc}}" style="width: 40%"></view>
+    </block>
+    <block wx:else>
+      <view class="item-title">{{title}}</view>
+      <view class="item-desc" wx:if="{{desc}}">{{desc}}</view>
+    </block>
+  </view>
+  
+  <!-- Right Value -->
+  <view class="item-value {{copyable ? 'copyable' : ''}}" wx:if="{{value || (loading && !desc)}}">
+    <block wx:if="{{loading}}">
+      <view class="skeleton-value"></view>
+    </block>
+    <block wx:else>
+      <view class="value-text">{{value}}</view>
+      <svg-icon 
+        wx:if="{{copyable}}" 
+        src="/assets/icons/ic_copy.svg" 
+        size="14" 
+        color="#94A3B8" 
+        style="display: inline-block; margin-left: 4px; vertical-align: middle;" 
+      />
+    </block>
+  </view>
+</template>

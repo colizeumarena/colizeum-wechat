@@ -1,0 +1,40 @@
+<view class="invoice-card">
+  
+  <view class="card-header">
+    <view class="invoice-title">{{title}}</view>
+    <view class="invoice-status {{status === 'paid' ? 'paid' : 'unpaid'}}">
+      {{statusText}}
+    </view>
+  </view>
+
+  
+  <view class="card-row date-row">
+    <view class="date-left">
+      <svg-icon class="date-icon" src="/assets/icons/ic_calendar.svg" color="#999999"/>
+      <text class="date-label">{{labels.date}}: </text>
+    </view>
+    <text class="date-value">{{date}}</text>
+  </view>
+
+  
+  <view class="card-details">
+    
+    <view class="detail-row">
+      <view class="detail-label">{{labels.period}}:</view>
+      <view class="detail-value period-text">{{period}}</view>
+    </view>
+    
+    <view class="detail-row">
+      <view class="detail-label">{{labels.amount}}:</view>
+      <view class="detail-value amount-text">{{amount}} {{currency}}</view>
+    </view>
+  </view>
+
+  <!--
+  <primary-button 
+    text="{{labels.download}}" 
+    icon="/assets/icons/ic_download.svg" 
+    bind:tap="handleDownload" 
+  />
+  -->
+</view>

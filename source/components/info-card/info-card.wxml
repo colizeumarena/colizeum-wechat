@@ -1,0 +1,12 @@
+<view class="{{variant==='green' ? 'contact-card contact-card--green' : 'contact-card'}}" bindtap="handleTap">
+  <view class="card-main">
+    <view class="card-icon-circle">
+      <svg-icon src="{{iconPath}}" class="card-icon-img " size="24" color="{{variant==='green' ? '#57be6a' : '#ffffff'}}" />
+    </view>
+    <view>
+      <view class="card-label">{{label}}</view>
+      <view class="card-value">{{value}}</view>
+    </view>
+  </view>
+  <text class="card-arrow">›</text>
+</view>

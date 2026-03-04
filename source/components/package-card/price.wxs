@@ -1,0 +1,21 @@
+var formatPrice = function (val, taxIncluded) {
+  if (val === undefined || val === null) return "--";
+
+  // If it's not a number (e.g. text description), return as is
+  if (typeof val !== "number") {
+    return val;
+  }
+
+  var price = val;
+  if (taxIncluded) {
+    price = val * 1.21;
+  }
+
+  // Format to 6 decimal places for precision, removing trailing zeros if needed could be nice but standard is usually fixed
+  // The user prompt showed 6 decimal places: 0.125141
+  return price.toFixed(6) + " €";
+};
+
+module.exports = {
+  formatPrice: formatPrice,
+};

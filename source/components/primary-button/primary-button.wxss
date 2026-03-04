@@ -1,0 +1,31 @@
+.primary-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  min-height: 48px; 
+}
+
+.primary-button--cyan {
+  background-color: var(--lumisa-dark-cyan);
+  box-shadow: 0 2px 4px rgba(127, 168, 168, 0.2);
+}
+
+.primary-button--dark {
+  background-color: var(--lumisa-dark);
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.primary-button-text {
+  font-size: 15px; 
+  font-weight: 700;
+  color: #ffffff;
+}

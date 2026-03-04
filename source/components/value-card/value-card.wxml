@@ -1,0 +1,20 @@
+
+<view wx:if="{{layoutType === 'header'}}" class="value-card value-card--header">
+  <view class="value-header">
+    <view class="value-icon-wrapper">
+      <svg-icon src="{{iconPath}}" class="value-icon-img" size="22" color="#ffffff" />
+    </view>
+    <view class="value-title value-title--header">{{title}}</view>
+  </view>
+  <view class="value-desc">{{desc}}</view>
+</view>
+
+<view wx:else class="value-card">
+  <view class="value-icon-wrapper">
+    <svg-icon src="{{iconPath}}" class="value-icon-img" size="22" color="#ffffff" />
+  </view>
+  <view class="value-content">
+    <view class="value-title">{{title}}</view>
+    <view class="value-desc">{{desc}}</view>
+  </view>
+</view>

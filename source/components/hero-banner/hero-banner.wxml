@@ -1,0 +1,9 @@
+<view class="banner">
+  <image class="banner-image" src="{{imageSrc}}" mode="aspectFill"></image>
+  <view class="banner-overlay"></view>
+  <view class="banner-center">
+    <view class="banner-title">{{title}}</view>
+    <view class="banner-subtitle">{{subtitle}}</view>
+  </view>
+  <slot></slot>
+</view>

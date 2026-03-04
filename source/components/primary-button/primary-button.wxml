@@ -1,0 +1,6 @@
+<view class="primary-button {{variant === 'dark' ? 'primary-button--dark' : 'primary-button--cyan'}}" bindtap="handleTap">
+  <block wx:if="{{icon}}">
+    <svg-icon src="{{icon}}" class="button-icon" />
+  </block>
+  <text class="primary-button-text">{{text}}</text>
+</view>

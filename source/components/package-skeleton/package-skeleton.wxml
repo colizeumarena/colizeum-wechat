@@ -1,0 +1,51 @@
+<view class="skeleton-container">
+  <view class="skeleton-card" wx:for="{{[1,2]}}" wx:key="*this">
+    <view class="sk-header-top">
+       <view class="sk-tags">
+         <view class="sk-tag"></view>
+         <view class="sk-tag"></view>
+       </view>
+       <view class="sk-badge"></view>
+    </view>
+    
+    <view class="sk-title-group">
+      <view class="sk-title"></view>
+      <view class="sk-subtitle"></view>
+    </view>
+    
+    <view class="sk-desc">
+       <view class="sk-line"></view>
+       <view class="sk-line short"></view>
+    </view>
+    
+    <view class="sk-price-block">
+       <view class="sk-block-title"></view>
+       <view class="sk-price-row">
+          <view class="sk-label"></view>
+          <view class="sk-value"></view>
+       </view>
+       <view class="sk-price-row">
+          <view class="sk-label"></view>
+          <view class="sk-value"></view>
+       </view>
+       <view class="sk-price-row">
+          <view class="sk-label"></view>
+          <view class="sk-value"></view>
+       </view>
+    </view>
+    
+    <view class="sk-price-block">
+       <view class="sk-block-title"></view>
+       <view class="sk-price-row">
+          <view class="sk-label"></view>
+          <view class="sk-value"></view>
+       </view>
+       <view class="sk-price-row">
+          <view class="sk-label"></view>
+          <view class="sk-value"></view>
+       </view>
+    </view>
+
+    <view class="sk-btn"></view>
+  </view>
+</view>

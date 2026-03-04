@@ -1,0 +1,10 @@
+<view class="custom-header" style="height: {{navHeight}}px; padding-top: {{statusBarHeight}}px;">
+  <view class="header-content">
+    <view class="back-btn" wx:if="{{showBack}}" bindtap="onBackTap">
+      <svg-icon class="back-icon" src="/assets/icons/ic_arrow.svg" size="16"
+      color="#999999"/>
+    </view>
+    <view class="header-title">{{title}}</view>
+    <view class="spacer" style="width: 32px;"></view>
+  </view>
+</view>

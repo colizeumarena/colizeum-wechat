@@ -1,0 +1,69 @@
+<wxs module="price" src="./price.wxs" />
+<view class="package-card">
+  <view class="card-header">
+    <view class="card-header-top" wx:if="{{(tagList && tagList.length) || badgeText}}">
+       <view class="tags-container" wx:if="{{tagList && tagList.length}}">
+           <block wx:for="{{tagList}}" wx:key="*this">
+               <view class="tag-item">
+                   <svg-icon wx:if="{{item.icon}}" src="{{item.icon}}" size="12" color="#666" class="tag-icon"/>
+                   <text class="tag-text">{{item.text}}</text>
+               </view>
+           </block>
+       </view>
+       <view wx:if="{{badgeText}}" class="badge-recommend">
+          <text class="badge-text">{{badgeText}}</text>
+       </view>
+    </view>
+    
+    <view class="card-title-group">
+      <view class="card-title">{{title}}</view>
+      <view wx:if="{{subtitle}}" class="card-subtitle">{{subtitle}}</view>
+    </view>
+  </view>
+
+  <view class="card-desc">
+    {{desc}}
+  </view>
+
+  <view wx:if="{{showTaxToggle}}" class="price-toggle-row" bindtap="toggleTax">
+    <text class="price-toggle-label">{{taxIncluded ? taxIncludedLabel : taxLabel}}</text>
+    <view class="toggle-placeholder {{taxIncluded ? 'active' : ''}}">
+        <!-- Mock toggle switch UI -->
+        <view class="toggle-track">
+            <view class="toggle-thumb"></view>
+        </view>
+    </view>
+  </view>
+
+  <view wx:if="{{energyRows && energyRows.length}}" class="price-block">
+    <view class="price-title">{{energyTitle}}</view>
+    <block wx:for="{{energyRows}}" wx:key="label">
+      <view class="price-row">
+        <text class="price-label {{item.highlight ? 'highlight' : ''}}">{{item.label}}</text>
+        <text class="price-value">{{price.formatPrice(item.value, taxIncluded)}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view wx:if="{{powerRows && powerRows.length}}" class="price-block">
+    <view class="price-title">{{powerTitle}}</view>
+    <block wx:for="{{powerRows}}" wx:key="label">
+      <view class="price-row">
+        <text class="price-label {{item.highlight ? 'highlight' : ''}}">{{item.label}}</text>
+        <text class="price-value">{{price.formatPrice(item.value, taxIncluded)}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view wx:if="{{extraRows && extraRows.length}}" class="price-block">
+    <view class="price-title">{{extraTitle}}</view>
+    <block wx:for="{{extraRows}}" wx:key="label">
+      <view class="price-row">
+        <text class="price-label {{item.highlight ? 'highlight' : ''}}">{{item.label}}</text>
+        <text class="price-value">{{item.value}}</text>
+      </view>
+    </block>
+  </view>
+
+  <slot></slot>
+</view>

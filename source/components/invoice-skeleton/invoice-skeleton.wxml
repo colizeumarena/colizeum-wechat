@@ -1,0 +1,7 @@
+<view class="skeleton-container">
+  <view class="skeleton-header">
+      <view class="skeleton-title"></view>
+      <view class="skeleton-count"></view>
+  </view>
+  <view class="skeleton-card" wx:for="{{[1,2,3]}}" wx:key="*this"></view>
+</view>

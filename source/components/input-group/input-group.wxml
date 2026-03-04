@@ -1,0 +1,22 @@
+<view>
+  <label class="form-label">{{label}}</label>
+  <view class="input-wrapper">
+    <svg-icon src="{{icon}}" class="input-icon" color="#999999" />
+    <input
+      class="form-input {{enablePasswordToggle && type === 'password' ? 'with-right-icon' : ''}}"
+      type="{{resolvedType}}"
+      password="{{resolvedPassword}}"
+      placeholder="{{placeholder}}"
+      value="{{value}}"
+      focus="{{refocus}}"
+      hold-keyboard="{{enablePasswordToggle && type === 'password'}}"
+      bindinput="handleInput"
+      bindfocus="handleFocus"
+      bindblur="handleBlur"
+    />
+    <view wx:if="{{enablePasswordToggle && type === 'password'}}" class="right-icon" catchtap="handleTogglePassword">
+      <svg-icon src="{{passwordVisible ? '/assets/icons/ic_pwd_eye_open.svg' : '/assets/icons/ic_pwd_eye_close.svg'}}" class="right-icon-img" color="#999999" />
+    </view>
+  </view>
+  <text wx:if="{{helper}}" class="helper-text">{{helper}}</text>
+</view>

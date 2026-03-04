@@ -1,0 +1,76 @@
+.contact-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  margin-bottom: 12px;
+}
+
+.card-main {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.card-icon-circle {
+  width: 42px;
+  height: 42px;
+  background-color: var(--lumisa-dark);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 14px;
+  flex-shrink: 0;
+}
+
+.card-icon-img {
+  width: 24px;
+  height: 24px;
+}
+
+.card-label {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.card-value {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.card-arrow {
+  font-size: 18px;
+  color: #d1d5db;
+  margin-left: 14px;
+}
+
+
+.contact-card--green {
+  background-color: #57be6a;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.contact-card--green .card-icon-circle {
+  background-color: #ffffff;
+}
+.contact-card--green .card-label {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+}
+.contact-card--green .card-value {
+  color: #e5f5ea;
+  font-size: 14px;
+  margin-top: 2px;
+}
+.contact-card--green .card-arrow {
+  color: #ecfdf3;
+  opacity: 0.9;
+}

@@ -1,0 +1,181 @@
+.package-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  margin-bottom: 16px;
+}
+
+.card-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  min-height: 24px;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.tag-icon {
+  margin-right: 4px;
+}
+
+.badge-recommend {
+  margin-left: auto;
+}
+
+.badge-text {
+  background-color: #16a34a;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.card-title-group {
+  margin-bottom: 16px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  display: none; /* Hidden in new design as per screenshot, or merged into title */
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.price-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.price-toggle-label {
+  font-size: 14px;
+  color: #64748b;
+  margin-right: 8px;
+}
+
+.toggle-placeholder {
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-track {
+  width: 36px;
+  height: 20px;
+  background-color: #cbd5e1;
+  border-radius: 999px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.toggle-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.toggle-placeholder.active .toggle-track {
+  background-color: #22c55e;
+}
+
+.toggle-placeholder.active .toggle-thumb {
+  transform: translateX(16px);
+}
+
+.price-block {
+  margin-bottom: 16px;
+}
+
+.price-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.price-row:last-child {
+  border-bottom: none;
+}
+
+.price-label {
+  color: #64748b;
+}
+
+.price-label.highlight {
+  color: #f97316; /* Orange for Punta */
+}
+
+.price-label.highlight:nth-of-type(2) {
+  color: #eab308; /* Yellow for Llano */
+}
+
+.price-label.highlight:nth-of-type(3) {
+  color: #22c55e; /* Green for Valle - logical guess, though screenshot shows 3 highlight colors for 3 period */
+}
+
+/* Custom highlight handling */
+.price-row:nth-child(2) .price-label.highlight {
+  color: #f97316;
+}
+.price-row:nth-child(3) .price-label.highlight {
+  color: #eab308;
+}
+.price-row:nth-child(4) .price-label.highlight {
+  color: #22c55e;
+}
+
+.price-value {
+  color: #1e293b;
+  font-family: monospace; /* Align numbers better */
+}

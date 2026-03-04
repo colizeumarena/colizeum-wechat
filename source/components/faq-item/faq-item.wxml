@@ -1,0 +1,14 @@
+<view class="faq-item">
+  <view class="faq-question" bindtap="handleToggle">
+    <text>{{question}}</text>
+    <svg-icon
+      src="/assets/icons/ic_arrow.svg"
+      class="arrow-icon {{isOpen ? 'up' : ''}}"
+      size="16"
+      color="{{isOpen ? '#999999' : '#999999'}}"
+    />
+  </view>
+  <view class="faq-answer" wx:if="{{isOpen}}">
+    <text>{{answer}}</text>
+  </view>
+</view>
